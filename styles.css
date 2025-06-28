@@ -82,8 +82,6 @@ nav a:hover
   margin-right: 12%;
   justify-content: center;
   padding: 60px 0px;
-  background: black;
-  color: white;
   text-align: left;
 }
 .main h2,h3
@@ -275,168 +273,164 @@ nav a:hover
   font-size: 15px;
   padding: 0px 0px 18px;
 }
-
-.carousel-section-container {
-    max-width: 900px; /* Max width for the whole carousel section */
+.course
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  justify-content: center;
+  padding: 60px 0px;
+  text-align: left;
+}
+.carousel-section-container 
+{
+  max-width: 900px;
+  width: 100%;
+  background-color: black;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  overflow: hidden;
+}
+.video-carousel-wrapper 
+{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 13px;
+}
+.video-carousel 
+{
+    display: flex;
+    transition: transform 0.5s ease-in-out; 
     width: 100%;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    text-align: center; /* Center the heading and dots */
-    overflow: hidden; /* Important for containing the slides */
 }
-
-.carousel-section-container h1 {
-    font-size: 2.5rem;
-    color: #2c3e50;
-    margin-bottom: 30px;
+.video-card 
+{
+  flex: 0 0 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color:#1F1F1F;
+  border-radius: 8px;
 }
-
-/* Video Carousel Wrapper */
-.video-carousel-wrapper {
-    position: relative;
-    overflow: hidden; /* Hides parts of slides not in view */
+@media (min-width: 768px) 
+{
+  .video-card 
+  {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+.video-thumbnail 
+{
     width: 100%;
-    border-radius: 8px; /* Match inner carousel border-radius */
-}
-
-/* Video Carousel (the moving track of slides) */
-.video-carousel {
-    display: flex; /* Arranges video cards in a row */
-    transition: transform 0.5s ease-in-out; /* Smooth transition for sliding */
-    width: 100%; /* Initially 100%, JS will adjust based on number of slides */
-}
-
-/* Individual Video Card */
-.video-card {
-    flex: 0 0 100%; /* Each card takes up 100% of the carousel-wrapper width */
-    display: flex; /* Flexbox for thumbnail and details */
-    flex-direction: column; /* Stack vertically by default for mobile */
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: #fdfdfd;
-    border-radius: 8px;
-    border: 1px solid #e0e0e0;
-}
-
-/* Media query for larger screens (e.g., tablets and desktops) */
-@media (min-width: 768px) {
-    .video-card {
-        flex-direction: row; /* Arrange horizontally on larger screens */
-        text-align: left; /* Align text left */
-    }
-}
-
-/* Video Thumbnail */
-.video-thumbnail {
-    width: 100%; /* Full width on mobile */
-    height: 225px; /* Fixed height for image container */
+    height: 225px;
     overflow: hidden;
     border-radius: 6px;
-    background-color: #ecf0f1; /* Placeholder background */
+    background-color: #ecf0f1;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px; /* Space below thumbnail on mobile */
+    margin-bottom: 20px;
 }
-
-.video-thumbnail img {
+.video-thumbnail img 
+{
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Cover the area, cropping if necessary */
+    object-fit: cover;
     display: block;
 }
-
-/* Media query for larger screens for thumbnail width */
-@media (min-width: 768px) {
-    .video-thumbnail {
-        width: 45%; /* Take up 45% of card width */
-        flex-shrink: 0; /* Prevent shrinking */
-        margin-right: 30px; /* Space to the right of thumbnail */
-        margin-bottom: 0; /* Remove bottom margin */
-    }
+@media (min-width: 768px) 
+{
+  .video-thumbnail 
+  {
+    width: 45%;
+    flex-shrink: 0;
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
 }
-
-/* Video Details (Title, Description, Button) */
-.video-details {
-    width: 100%; /* Full width on mobile */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center content horizontally on mobile */
+.video-details 
+{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-/* Media query for larger screens for text alignment and width */
-@media (min-width: 768px) {
-    .video-details {
-        width: 55%; /* Take up 55% of card width */
-        align-items: flex-start; /* Align content to the start (left) */
-    }
+@media (min-width: 768px) 
+{
+  .video-details 
+  {
+    width: 55%;
+    align-items: flex-start;
+  }
 }
-
-.video-title {
+.video-title 
+{
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 15px;
-    color: #34495e;
+    color: white;
     line-height: 1.3;
 }
-
 .video-description {
     font-size: 1rem;
-    color: #666;
+    color: whitesmoke;
     margin-bottom: 25px;
     line-height: 1.6;
-    max-height: 4.8em; /* Limit description height (approx 3 lines) */
+    max-height: 4.8em;
     overflow: hidden;
-    text-overflow: ellipsis; /* Add ellipsis if content overflows */
+    text-overflow: ellipsis;
 }
-
-.view-button {
-    display: inline-block;
-    background-color: #007bff;
-    color: #ffffff;
-    padding: 12px 25px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+.view-button
+{
+  display: inline-block;
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
 }
-
-.view-button:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+.view-button:hover 
+{
+  background-color: #0056b3;
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
 }
-
-/* Carousel Dots Navigation */
-.carousel-dots {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    gap: 10px; /* Space between dots */
+.carousel-dots 
+{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  gap: 13px;
 }
-
-.dot {
-    width: 12px;
-    height: 12px;
-    background-color: #bbb;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    border: 2px solid transparent; /* For active state outline */
+.dot
+{
+  width: 12px;
+  height: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border: 2px solid transparent;
 }
-
-.dot.active {
-    background-color: #007bff;
-    transform: scale(1.2);
-    border-color: #007bff; /* Active dot outline */
+.dot.active 
+{
+  background-color: #007bff;
+  transform: scale(1.2);
+  border-color: #007bff;
 }
-
-.dot:hover {
-    background-color: #888;
+.dot:hover
+{
+  background-color: #888;
 }
 /*
 .container2
