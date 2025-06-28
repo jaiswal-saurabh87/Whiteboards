@@ -1,0 +1,214 @@
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Whiteboards - The Student's Workspace</title>
+  <link rel="icon" type="image" href="favicon.png">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo-dark.png" id="logoImg">
+      <h1 style="color :white; font-family: 'Ginger'; font-size: 38px;"> WHITEBOARDS</h1>
+    </div>
+    <nav>
+      <a href="#features">Free Courses</a>
+      <a href="#features">Features</a>
+      <a href="#login">Login</a>
+      <a href="#signup" class="signup-button">Sign-Up</a>
+    </nav>
+  </header>
+  <section class="main">
+    <h2 style="color :white; font-family: 'AvenirLTPro-Black'; font-size: 50px;">ARE YOU A</h2>
+    <h3 style="color :white; font-family: 'AvenirLTPro-Black'; font-size: 120px;">STUDENT?</h3>
+    <p>Wants a workspace where only You and person with your Mindsets comes</p>
+    <button class="st-button">Start Now &gt;</button>
+  </section>
+  <section id="feature" class="py-16 bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center p-4">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-12 text-center">FEATURES</h2>
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
+      <!-- Feature Box 1 -->
+      <div class="feature-box bg-blue-700 rounded-xl p-8 flex flex-col items-center justify-center text-center cursor-pointer shadow-lg hover:shadow-xl">
+        <h3 class="text-2xl font-semibold mb-4">Innovative Design</h3>
+        <p class="text-gray-200">Experience a sleek and modern interface that redefines user interaction.</p>
+      </div>
+
+      <!-- Feature Box 2 -->
+      <div class="feature-box bg-blue-700 rounded-xl p-8 flex flex-col items-center justify-center text-center cursor-pointer shadow-lg hover:shadow-xl">
+        <h3 class="text-2xl font-semibold mb-4">Powerful Performance</h3>
+        <p class="text-gray-200">Enjoy lightning-fast speeds and seamless operations with optimized performance.</p>
+      </div>
+
+      <!-- Feature Box 3 -->
+      <div class="feature-box bg-blue-700 rounded-xl p-8 flex flex-col items-center justify-center text-center cursor-pointer shadow-lg hover:shadow-xl">
+        <h3 class="text-2xl font-semibold mb-4">Secure & Reliable</h3>
+        <p class="text-gray-200">Your data is safe with us. We ensure top-notch security and reliability.</p>
+      </div>
+
+      <!-- Feature Box 4 -->
+      <div class="feature-box bg-blue-700 rounded-xl p-8 flex flex-col items-center justify-center text-center cursor-pointer shadow-lg hover:shadow-xl">
+        <h3 class="text-2xl font-semibold mb-4">24/7 Support</h3>
+        <p class="text-gray-200">Our dedicated support team is always ready to assist you, day or night.</p>
+      </div>
+    </div>
+
+    <!-- Pop-up Overlay (Hidden by default) -->
+    <div id="popupOverlay" class="fixed inset-0 z-50 flex items-center justify-center hidden popup-overlay">
+      <div class="popup-content bg-gray-800 rounded-lg shadow-2xl p-8 max-w-sm mx-4 text-center border-2 border-blue-600">
+        <h3 class="text-3xl font-bold mb-6 text-white">READY TO EXPERIENCE?</h3>
+        <p class="text-xl text-gray-200 mb-8">SIGN UP NOW!</p>
+        <button id="signupButton" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
+          Sign Up
+        </button>
+        <button id="closePopup" class="mt-4 text-gray-400 hover:text-gray-200 text-sm">Close</button>
+      </div>
+    </div>
+  </section>
+  <!-- END of new feature section -->
+
+  <!-- START of new Upskill Yourself section -->
+  <section id="upskill" class="py-16 bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center p-4 upskill-section">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-center">UP-SKILL YOURSELF</h2>
+    <p class="text-xl text-gray-200 mb-12 text-center">(in collaboration with AARC Tech)</p>
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-center gap-8 px-4">
+      <!-- Placeholder Box for Course Thumbnail -->
+      <div class="w-full md:w-1/3 h-64 bg-blue-700 rounded-xl shadow-lg flex items-center justify-center p-4 upskill-content-box">
+        <!-- Placeholder for image/video thumbnail -->
+        <p class="text-gray-300 text-lg">Course Thumbnail Placeholder</p>
+      </div>
+
+      <!-- Course Details -->
+      <div class="w-full md:w-2/3 text-center md:text-left">
+        <h3 class="text-3xl font-bold mb-4">JavaScript Syntax and Variables <br>(Lets, Constants, Var.) #2</h3>
+        <a href="#" class="inline-flex items-center text-blue-400 hover:text-blue-200 transition duration-300 ease-in-out">
+          View
+          <!-- Phosphor Icon for Arrow Right -->
+          <svg class="w-6 h-6 ml-2" fill="currentColor" viewBox="0 0 256 256">
+            <path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,74.49a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- END of new Upskill Yourself section -->
+
+  <!-- START of transparent separator line -->
+  <div class="w-full h-px bg-gray-700 opacity-30 my-8 md:my-12"></div>
+  <!-- END of transparent separator line -->
+
+  <!-- START of new Suggestions section -->
+  <section id="suggestions" class="py-16 bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center p-4 suggestions-section">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-center">SUGGESTIONS</h2>
+    <p class="text-xl text-gray-200 mb-12 text-center">All your suggestions matter. We are always trying to provide the best of us!</p>
+
+    <div class="container mx-auto flex flex-col-reverse md:flex-row items-center justify-center gap-8 px-4">
+      <!-- Suggestion Form (Left Side) -->
+      <div class="w-full md:w-1/2 bg-gray-800 rounded-xl shadow-lg p-8 suggestions-content-box">
+        <h3 class="text-2xl font-semibold mb-6 text-white text-center">Share Your Thoughts</h3>
+        <form class="suggestions-form space-y-4">
+          <div>
+            <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+          <div>
+            <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+          <div>
+            <label for="suggestion" class="block text-gray-300 text-sm font-bold mb-2">Your Suggestion:</label>
+            <textarea id="suggestion" name="suggestion" rows="6" placeholder="Type your suggestion here..." class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+          </div>
+          <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105 shadow-md w-full md:w-auto">
+            Submit Suggestion
+          </button>
+        </form>
+      </div>
+
+      <!-- Image (Right Side) -->
+      <div class="w-full md:w-1/2 flex items-center justify-center p-4">
+        <img src="https://placehold.co/600x400/007BFF/FFFFFF?text=Illustration+of+Suggestions" alt="Suggestions Illustration" class="rounded-xl shadow-lg w-full h-auto max-w-full">
+      </div>
+    </div>
+  </section>
+  <!-- END of new Suggestions section -->
+
+
+  <footer>
+    WHITEBOARDS <br>
+    &copy; 2025 all right reserved <br>
+    <img src="logo.png" alt="Whiteboards Logo">
+  </footer>
+
+  <!-- Floating Theme Toggle Button -->
+  <button class="theme-toggle-btn" id="themeToggleBtn">
+    <img src="moon-icon.png" alt="Toggle Theme">
+  </button>
+
+  <script>
+    // Existing script for theme toggle
+    const toggleBtn = document.getElementById('themeToggleBtn');
+    const body = document.body;
+    const logo = document.getElementById('logoImg');
+
+    function toggleTheme() {
+      body.classList.toggle('dark');
+      if (body.classList.contains('dark')) {
+        logo.src = 'logo-white.png';
+      } else {
+        logo.src = 'logo-dark.png';
+      }
+    }
+
+    toggleBtn.addEventListener('click', toggleTheme);
+
+    // Set initial logo on load
+    window.addEventListener('DOMContentLoaded', () => {
+      if (body.classList.contains('dark')) {
+        logo.src = 'logo-white.png';
+      } else {
+        logo.src = 'logo-dark.png';
+      }
+    });
+
+    // START of new script for feature section popup
+    // Get all feature boxes
+    const featureBoxes = document.querySelectorAll('.feature-box');
+    // Get the popup overlay and close button
+    const popupOverlay = document.getElementById('popupOverlay');
+    const closePopupButton = document.getElementById('closePopup');
+    // Get the signup button (for future functionality, though not implemented here)
+    const signupButton = document.getElementById('signupButton');
+
+    // Add click event listener to each feature box
+    featureBoxes.forEach(box => {
+      box.addEventListener('click', () => {
+        popupOverlay.classList.remove('hidden'); // Show the popup
+      });
+    });
+
+    // Add click event listener to the close button
+    closePopupButton.addEventListener('click', () => {
+      popupOverlay.classList.add('hidden'); // Hide the popup
+    });
+
+    // Optional: Add functionality to the signup button
+    signupButton.addEventListener('click', () => {
+      // In a real application, you would redirect to a signup page or show a signup form here.
+      console.log('Sign Up button clicked!');
+      // For now, just hide the popup
+      popupOverlay.classList.add('hidden');
+      // You could also add a temporary message saying "Redirecting to Sign Up page..."
+    });
+
+    // Close the popup if the overlay is clicked (outside the content)
+    popupOverlay.addEventListener('click', (event) => {
+      if (event.target === popupOverlay) {
+        popupOverlay.classList.add('hidden');
+      }
+    });
+    // END of new script for feature section popup
+  </script>
+</body>
+</html>
