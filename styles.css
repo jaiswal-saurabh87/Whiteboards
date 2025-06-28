@@ -132,34 +132,38 @@ nav a:hover
   border: 1px solid #ddd;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-.container1 p
+.feature-box 
+{
+  width: auto;
+  height: auto;
+  border: 2px solid #007bff;
+  background-color: blue;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
+}
+.feature-box:hover 
+{
+  transform: translateY(-3px);
+}
+.feature-box p
 {
   color :white;
   font-family: 'AvenirLTPro-Black';
   font-size: 40px;
 }
-.container1 h
+.feature-box h
 {
   color :white;
   font-family: 'AvenirLTPro-Black';
   font-size: 50px;
-}
-.feature-box 
-{
-  width: auto;
-  height: auto;
-  border: 2px solid #007bff; /* Blue border */
-  background-color: #e6f7ff; /* Light blue background */
-  display: flex; /* Make content inside the box a flex container */
-  flex-direction: column; /* Stack content (h3, p) vertically */
-  justify-content: center; /* Center content vertically inside the box */
-  align-items: center; /* Center content horizontally inside the box */
-  text-align: center;
-  padding: 15px;
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
-  border-radius: 8px; /* Slightly rounded corners */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease-in-out; /* Smooth hover effect */
 }
 .features h3, .suggestions h3 
 {
