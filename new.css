@@ -1,108 +1,99 @@
-/* popup.css */
+.upskill-card-container {
+    width: 100%; /* Default to full width for mobile */
+    max-width: 768px; /* Arbitrary max width for the card on larger screens */
+    margin-left: auto; /* mx-auto */
+    margin-right: auto; /* mx-auto */
+    display: flex; /* flex */
+    flex-direction: column; /* flex-col (default for mobile) */
+    align-items: center; /* items-center */
+    justify-content: center; /* justify-center */
+    gap: 2rem; /* gap-8 (Tailwind's gap-8 is 2rem or 32px) */
+    padding-left: 1rem; /* px-4 */
+    padding-right: 1rem; /* px-4 */
+    background-color: #2d3748; /* A darker background for the container itself */
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+    padding-top: 2rem; /* Add some vertical padding inside the card */
+    padding-bottom: 2rem; /* Add some vertical padding inside the card */
+}
 
-/* Pop-up Overlay */
-.popup-box {
-    position: fixed; /* fixed inset-0 */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 50; /* z-50 */
+/* Media query for medium screens and up (md: breakpoint in Tailwind, typically 768px) */
+@media (min-width: 768px) {
+    .upskill-card-container {
+        flex-direction: row; /* md:flex-row */
+    }
+}
+
+/* Thumbnail box styling, translating `w-full md:w-1/3 h-64 bg-blue-700 rounded-xl shadow-lg flex items-center justify-center p-4 upskill-content-box` */
+.upskill-thumbnail-box {
+    width: 100%; /* w-full for mobile */
+    height: 16rem; /* h-64 (Tailwind's h-64 is 16rem or 256px) */
+    background-color: #2b6cb0; /* bg-blue-700 */
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
     display: flex; /* flex */
     align-items: center; /* items-center */
     justify-content: center; /* justify-center */
-    background-color: rgba(0, 0, 0, 0.7); /* A darker, semi-transparent background */
-    backdrop-filter: blur(5px); /* Optional: Adds a blur effect to content behind */
-
-    /* Hidden by default, controlled by JavaScript */
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    padding: 1rem; /* p-4 */
+    box-sizing: border-box; /* Include padding in width/height */
 }
 
-/* Class to hide the popup using JavaScript */
-.popup-box.hidden-popup {
-    opacity: 0;
-    visibility: hidden;
+/* Media query for medium screens and up */
+@media (min-width: 768px) {
+    .upskill-thumbnail-box {
+        width: 33.333333%; /* md:w-1/3 */
+        flex-shrink: 0; /* Prevent it from shrinking too much */
+    }
 }
 
-/* Pop-up Content Box */
-.popup-content {
-    background-color: #1a202c; /* bg-gray-800 */
-    border-radius: 0.5rem; /* rounded-lg */
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* shadow-2xl equivalent */
-    padding: 2rem; /* p-8 (1 unit = 0.25rem, so 8 units = 2rem) */
-    max-width: 24rem; /* max-w-sm (Tailwind 'sm' breakpoint is 24rem) */
-    margin-left: 1rem; /* mx-4 (margin-left: 1rem) */
-    margin-right: 1rem; /* mx-4 (margin-right: 1rem) */
-    text-align: center; /* text-center */
-    border: 2px solid #2563eb; /* border-2 border-blue-600 */
-
-    /* Animation for content (optional) */
-    transform: scale(1);
-    transition: transform 0.3s ease;
+/* Thumbnail text styling */
+.upskill-thumbnail-text {
+    color: #cbd5e0; /* text-gray-300 */
+    font-size: 1.125rem; /* text-lg */
+    text-align: center;
+    margin: 0; /* Remove default paragraph margin */
 }
 
-/* When popup is hidden, scale down the content */
-.popup-box.hidden-popup .popup-content {
-    transform: scale(0.9);
+/* Content text section styling, translating `w-full md:w-2/3 text-center md:text-left` */
+.upskill-content-text {
+    width: 100%; /* w-full for mobile */
+    text-align: center; /* text-center for mobile */
 }
 
-/* Pop-up Title (H3) */
-.popup-title {
+/* Media query for medium screens and up */
+@media (min-width: 768px) {
+    .upskill-content-text {
+        width: 66.666667%; /* md:w-2/3 */
+        text-align: left; /* md:text-left */
+    }
+}
+
+/* Title styling, translating `text-3xl font-bold mb-4` */
+.upskill-title {
     font-size: 1.875rem; /* text-3xl (30px) */
     font-weight: 700; /* font-bold */
-    margin-bottom: 1.5rem; /* mb-6 (24px) */
+    margin-bottom: 1rem; /* mb-4 (16px) */
     color: #fff; /* text-white */
+    line-height: 1.2; /* Adjust line height for multi-line title */
 }
 
-/* Pop-up Description (P) */
-.popup-description {
-    font-size: 1.25rem; /* text-xl (20px) */
-    color: #e2e8f0; /* text-gray-200 */
-    margin-bottom: 2rem; /* mb-8 (32px) */
+/* View link styling, translating `inline-flex items-center text-blue-400 hover:text-blue-200 transition duration-300 ease-in-out` */
+.upskill-view-link {
+    display: inline-flex; /* inline-flex */
+    align-items: center; /* items-center */
+    color: #63b3ed; /* text-blue-400 */
+    text-decoration: none; /* Remove underline from link */
+    transition: color 0.3s ease-in-out; /* transition duration-300 ease-in-out */
 }
 
-/* Common button styles */
-.popup-button {
-    font-weight: 700; /* font-bold */
-    padding-top: 0.75rem; /* py-3 (12px) */
-    padding-bottom: 0.75rem; /* py-3 (12px) */
-    padding-left: 2rem; /* px-8 (32px) */
-    padding-right: 2rem; /* px-8 (32px) */
-    border-radius: 9999px; /* rounded-full */
-    transition: all 0.3s ease-in-out; /* transition duration-300 ease-in-out */
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
-    border: none; /* Remove default button border */
-    cursor: pointer;
+.upskill-view-link:hover {
+    color: #a7d9ff; /* hover:text-blue-200 */
 }
 
-/* Sign Up Button Specific Styles */
-.signup-button {
-    background-color: #2563eb; /* bg-blue-600 */
-    color: #fff; /* text-white */
-    transform: scale(1); /* transform */
-}
-
-.signup-button:hover {
-    background-color: #1d4ed8; /* hover:bg-blue-700 */
-    transform: scale(1.05); /* hover:scale-105 */
-}
-
-/* Close Button Specific Styles */
-.close-button {
-    background: none; /* No background */
-    padding: 0; /* No padding */
-    font-size: 0.875rem; /* text-sm */
-    color: #a0aec0; /* text-gray-400 */
-    margin-top: 1rem; /* mt-4 */
-    display: block; /* Make it a block element to take full width and center text */
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content; /* Only take width of content */
-}
-
-.close-button:hover {
-    color: #e2e8f0; /* hover:text-gray-200 */
-    text-decoration: underline; /* Optional: Add underline on hover */
+/* SVG icon styling */
+.upskill-view-icon {
+    width: 1.5rem; /* w-6 (24px) */
+    height: 1.5rem; /* h-6 (24px) */
+    margin-left: 0.5rem; /* ml-2 (8px) */
+    /* currentColor means the SVG will inherit the text color of its parent */
 }
