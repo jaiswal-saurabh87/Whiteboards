@@ -259,7 +259,54 @@ nav a:hover
     color: white;
     text-decoration: underline;
 }
+.course h6
+{
+  text-align: center;
+  padding: 15px 0px 0px;
+}
+.text
+{
+  color :white;
+  text-align: center;
+  font-family: 'AvenirLTPro-Black';
+  font-size: 28px;
+}
+.collab 
+{
+  font-size: 15px;
+  padding: 0px 0px 18px;
+}
+.container2
+{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 .features h3, .suggestions h3 
 {
   text-align: center;
@@ -294,7 +341,7 @@ nav a:hover
       text-align: center;
       margin: 10px 0;
       font-size: 1.1rem;
-    } */
+    } 
     footer {
       text-align: center;
       padding: 20px;
@@ -320,9 +367,9 @@ nav a:hover
     body.dark .main {
       background: linear-gradient(to right, #333, #444);
     }
-    /* Dark mode for the new upskill section */
+    /* Dark mode for the new upskill section 
     body.dark .upskill-section {
-      background-color: #1a1a1a; /* Slightly lighter dark than body for contrast */
+      background-color: #1a1a1a; /* Slightly lighter dark than body for contrast
       color: #f0f0f0;
     }
     body.dark .upskill-content-box {
@@ -331,9 +378,9 @@ nav a:hover
     body.dark .upskill-content-box .text-gray-200 {
       color: #cccccc;
     }
-    /* Dark mode for the new suggestions section */
+    /* Dark mode for the new suggestions section
     body.dark .suggestions-section {
-      background-color: #121212; /* Match body background for seamless look */
+      background-color: #121212; /* Match body background for seamless look 
     }
     body.dark .suggestions-content-box {
       background-color: #1a1a1a;
@@ -379,7 +426,7 @@ nav a:hover
       height: 24px;
     }
 
-    /* Custom styles for smooth animation from feature-section */
+    /* Custom styles for smooth animation from feature-section
     .feature-box {
       transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     }
@@ -407,3 +454,6 @@ nav a:hover
         transform: scale(1);
       }
     }
+   */
+   
+  
