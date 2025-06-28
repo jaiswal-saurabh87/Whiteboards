@@ -1,0 +1,69 @@
+
+
+/* Styles for the container to make it a flex container */
+.container {
+    display: flex; /* Makes the direct children (feature-boxes) arrange in a row */
+    justify-content: space-around; /* Distributes space evenly between and around items */
+    /* Alternative justify-content options:
+       - flex-start: Items at the beginning
+       - flex-end: Items at the end
+       - center: Items in the center
+       - space-between: Distributes space evenly between items, no space at ends
+    */
+    align-items: flex-start; /* Aligns items at the start of the cross-axis (top, in this case) */
+    /* Alternative align-items options:
+       - stretch: Stretches items to fill the container (default if no height is set on items)
+       - center: Centers items vertically
+       - flex-end: Aligns items at the end
+    */
+    flex-wrap: wrap; /* Allows items to wrap to the next line if the screen is too narrow */
+    gap: 20px; /* Adds a gap between flex items (modern and efficient) */
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Styles for individual feature boxes */
+.feature-box {
+    width: 200px; /* Set a fixed width for each box */
+    height: 150px; /* Set a fixed height for each box */
+    border: 2px solid #007bff; /* Blue border */
+    background-color: #e6f7ff; /* Light blue background */
+    display: flex; /* Make content inside the box a flex container */
+    flex-direction: column; /* Stack content (h3, p) vertically */
+    justify-content: center; /* Center content vertically inside the box */
+    align-items: center; /* Center content horizontally inside the box */
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.feature-box:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Basic styling for the content inside the boxes */
+.feature-box h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.feature-box p {
+    margin: 0;
+    color: #555;
+    font-size: 0.9em;
+}
+
+/* You can add specific styles for each box if needed, though often not necessary */
+/*
+.feature-box-1 {
+    background-color: #ffe6e6;
+}
+.feature-box-2 {
+    background-color: #e6ffe6;
+}
