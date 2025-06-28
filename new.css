@@ -1,69 +1,108 @@
+/* popup.css */
 
+/* Pop-up Overlay */
+.popup-box {
+    position: fixed; /* fixed inset-0 */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50; /* z-50 */
+    display: flex; /* flex */
+    align-items: center; /* items-center */
+    justify-content: center; /* justify-center */
+    background-color: rgba(0, 0, 0, 0.7); /* A darker, semi-transparent background */
+    backdrop-filter: blur(5px); /* Optional: Adds a blur effect to content behind */
 
-/* Styles for the container to make it a flex container */
-.container {
-    display: flex; /* Makes the direct children (feature-boxes) arrange in a row */
-    justify-content: space-around; /* Distributes space evenly between and around items */
-    /* Alternative justify-content options:
-       - flex-start: Items at the beginning
-       - flex-end: Items at the end
-       - center: Items in the center
-       - space-between: Distributes space evenly between items, no space at ends
-    */
-    align-items: flex-start; /* Aligns items at the start of the cross-axis (top, in this case) */
-    /* Alternative align-items options:
-       - stretch: Stretches items to fill the container (default if no height is set on items)
-       - center: Centers items vertically
-       - flex-end: Aligns items at the end
-    */
-    flex-wrap: wrap; /* Allows items to wrap to the next line if the screen is too narrow */
-    gap: 20px; /* Adds a gap between flex items (modern and efficient) */
-    padding: 20px;
-    border: 1px solid #ddd;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    /* Hidden by default, controlled by JavaScript */
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-/* Styles for individual feature boxes */
-.feature-box {
-    width: 200px; /* Set a fixed width for each box */
-    height: 150px; /* Set a fixed height for each box */
-    border: 2px solid #007bff; /* Blue border */
-    background-color: #e6f7ff; /* Light blue background */
-    display: flex; /* Make content inside the box a flex container */
-    flex-direction: column; /* Stack content (h3, p) vertically */
-    justify-content: center; /* Center content vertically inside the box */
-    align-items: center; /* Center content horizontally inside the box */
-    text-align: center;
-    padding: 15px;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    border-radius: 8px; /* Slightly rounded corners */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+/* Class to hide the popup using JavaScript */
+.popup-box.hidden-popup {
+    opacity: 0;
+    visibility: hidden;
 }
 
-.feature-box:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
+/* Pop-up Content Box */
+.popup-content {
+    background-color: #1a202c; /* bg-gray-800 */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* shadow-2xl equivalent */
+    padding: 2rem; /* p-8 (1 unit = 0.25rem, so 8 units = 2rem) */
+    max-width: 24rem; /* max-w-sm (Tailwind 'sm' breakpoint is 24rem) */
+    margin-left: 1rem; /* mx-4 (margin-left: 1rem) */
+    margin-right: 1rem; /* mx-4 (margin-right: 1rem) */
+    text-align: center; /* text-center */
+    border: 2px solid #2563eb; /* border-2 border-blue-600 */
+
+    /* Animation for content (optional) */
+    transform: scale(1);
+    transition: transform 0.3s ease;
 }
 
-/* Basic styling for the content inside the boxes */
-.feature-box h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    color: #333;
+/* When popup is hidden, scale down the content */
+.popup-box.hidden-popup .popup-content {
+    transform: scale(0.9);
 }
 
-.feature-box p {
-    margin: 0;
-    color: #555;
-    font-size: 0.9em;
+/* Pop-up Title (H3) */
+.popup-title {
+    font-size: 1.875rem; /* text-3xl (30px) */
+    font-weight: 700; /* font-bold */
+    margin-bottom: 1.5rem; /* mb-6 (24px) */
+    color: #fff; /* text-white */
 }
 
-/* You can add specific styles for each box if needed, though often not necessary */
-/*
-.feature-box-1 {
-    background-color: #ffe6e6;
+/* Pop-up Description (P) */
+.popup-description {
+    font-size: 1.25rem; /* text-xl (20px) */
+    color: #e2e8f0; /* text-gray-200 */
+    margin-bottom: 2rem; /* mb-8 (32px) */
 }
-.feature-box-2 {
-    background-color: #e6ffe6;
+
+/* Common button styles */
+.popup-button {
+    font-weight: 700; /* font-bold */
+    padding-top: 0.75rem; /* py-3 (12px) */
+    padding-bottom: 0.75rem; /* py-3 (12px) */
+    padding-left: 2rem; /* px-8 (32px) */
+    padding-right: 2rem; /* px-8 (32px) */
+    border-radius: 9999px; /* rounded-full */
+    transition: all 0.3s ease-in-out; /* transition duration-300 ease-in-out */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+    border: none; /* Remove default button border */
+    cursor: pointer;
+}
+
+/* Sign Up Button Specific Styles */
+.signup-button {
+    background-color: #2563eb; /* bg-blue-600 */
+    color: #fff; /* text-white */
+    transform: scale(1); /* transform */
+}
+
+.signup-button:hover {
+    background-color: #1d4ed8; /* hover:bg-blue-700 */
+    transform: scale(1.05); /* hover:scale-105 */
+}
+
+/* Close Button Specific Styles */
+.close-button {
+    background: none; /* No background */
+    padding: 0; /* No padding */
+    font-size: 0.875rem; /* text-sm */
+    color: #a0aec0; /* text-gray-400 */
+    margin-top: 1rem; /* mt-4 */
+    display: block; /* Make it a block element to take full width and center text */
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content; /* Only take width of content */
+}
+
+.close-button:hover {
+    color: #e2e8f0; /* hover:text-gray-200 */
+    text-decoration: underline; /* Optional: Add underline on hover */
 }

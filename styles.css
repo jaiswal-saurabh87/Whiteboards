@@ -165,6 +165,100 @@ nav a:hover
   font-family: 'AvenirLTPro-Black';
   font-size: 50px;
 }
+.popup
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.popup.hidden-popup 
+{
+    opacity: 0;
+    visibility: hidden;
+}
+.popup-content 
+{
+  background-color: #1a202c;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #007BFF;
+  padding: 50px;
+  max-width: 600px;
+  max-height: 350px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  text-align: center;
+  border: 2px solid #2563eb;
+  transition: transform 0.3s ease;
+}
+.popup-box.hidden-popup .popup-content
+{
+    transform: scale(0.9);
+}
+.popup-title
+{
+    font-size: 35px;
+    font-family: 'AvenirLTPro-Black';
+    margin-bottom: 5px;
+    color: white;
+}
+.popup-text
+{
+  font-size: 25px;
+  color: white;
+  margin-bottom: 25px;;
+}
+.popup-button 
+{
+  font-weight: 700; /* font-bold */
+  padding-top: 0.75rem; /* py-3 (12px) */
+  padding-bottom: 0.75rem; /* py-3 (12px) */
+  padding-left: 2rem; /* px-8 (32px) */
+  padding-right: 2rem; /* px-8 (32px) */
+  border-radius: 9999px; /* rounded-full */
+  transition: all 0.3s ease-in-out; /* transition duration-300 ease-in-out */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+  border: none; /* Remove default button border */
+  cursor: pointer;
+}
+.signup
+{
+    background-color: #2563eb; /* bg-blue-600 */
+    color: #fff; /* text-white */
+    transform: scale(1); /* transform */
+}
+.signup:hover 
+{
+    background-color: #1d4ed8; /* hover:bg-blue-700 */
+    transform: scale(1.05); /* hover:scale-105 */
+}
+.close
+{
+    background: none;
+    padding: 0;
+    font-size: 0.875rem;
+    color: #a0aec0; 
+    margin-top: 1rem; 
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content; 
+}
+.close:hover
+{
+    color: #e2e8f0; /* hover:text-gray-200 */
+    text-decoration: underline; /* Optional: Add underline on hover */
+}
 .features h3, .suggestions h3 
 {
   text-align: center;
