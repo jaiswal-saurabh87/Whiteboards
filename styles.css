@@ -434,12 +434,15 @@ nav a:hover
 {
   background-color: #888;
 }
-.suggestion h8
+.text1
 {
+  color :white;
   text-align: center;
-  padding: 15px;
+  font-family: 'AvenirLTPro-Black';
+  padding : 0px 0px 75px;
+  font-size: 24px;
 }
- 
+
 /* 
 .features h3, .suggestions h3 
 {
