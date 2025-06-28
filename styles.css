@@ -126,7 +126,8 @@ nav a:hover
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 20px;
+  padding: 20px 40px 50px;
+
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 .feature-box 
@@ -410,7 +411,7 @@ nav a:hover
   display: flex;
   justify-content: center;
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   gap: 13px;
 }
 .dot
@@ -433,109 +434,13 @@ nav a:hover
 {
   background-color: #888;
 }
-/*
-.container2
+.suggestion h8
 {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
-  border: 1px solid #ddd;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-.container2
-{
-    width: 86%;
-    min-width: 500px;
-    margin-left: 7%;
-    margin-right: 7%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 2rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    background-color: #2d3748; 
-    border-radius: 0.75rem;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    padding-top: 2rem;
-    padding-bottom: 2rem; 
-
-@media (min-width: 768px) 
-{
-    .container2
-    {
-        flex-direction: row;
-    }
-}
-.thumbnail-box 
-{
-    width: 100%; 
-    height: 16rem;
-    background-color: #2b6cb0; 
-    border-radius: 0.75rem; 
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    box-sizing: border-box;
-}
-@media (min-width: 768px) 
-{
-    .thumbnail-box
-    {
-        width: 33.333333%; 
-        flex-shrink: 0; 
-    }
-}
-.thumbnail-text 
-{
-    color: #cbd5e0;
-    font-size: 1.125rem;
-    text-align: center;
-    margin: 0; 
-}
-.content-text {
-    width: 100%;
-    text-align: center;
-}
-
-@media (min-width: 768px) 
-{
-    .content-text
-    {
-        width: 66.666667%; 
-        text-align: left; 
-    }
-}
-
-.thumbnail-title
-{
-    font-size: 1.875rem;
-    font-weight: 700;
-    margin-bottom: 1rem; 
-    color: #fff;
-    line-height: 1.2;
-}
-.view-link
-{
-    display: inline-flex; 
-    align-items: center;
-    color: #63b3ed; 
-    text-decoration: none;
-    transition: color 0.3s ease-in-out; 
-}
-
-.view-link:hover
-{
-    color: #a7d9ff; 
+  text-align: center;
+  padding: 15px;
 }
  
-__________________________________________________________________________
-
+/* 
 .features h3, .suggestions h3 
 {
   text-align: center;
