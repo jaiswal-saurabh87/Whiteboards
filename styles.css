@@ -129,7 +129,6 @@ nav a:hover
   flex-wrap: wrap;
   gap: 20px;
   padding: 20px;
-  border: 1px solid #ddd;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 .feature-box 
@@ -259,17 +258,12 @@ nav a:hover
     color: white;
     text-decoration: underline;
 }
-
-
-
-/* 
 .course h6
 {
   text-align: center;
   padding: 15px 0px 0px;
 }
-  */
-/* .text
+.text
 {
   color :white;
   text-align: center;
@@ -281,6 +275,7 @@ nav a:hover
   font-size: 15px;
   padding: 0px 0px 18px;
 }
+/*
 .container2
 {
   display: flex;
