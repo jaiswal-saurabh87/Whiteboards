@@ -126,8 +126,7 @@ nav a:hover
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 20px 40px 50px;
-
+  padding: 20px 100px 50px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 .feature-box 
@@ -433,6 +432,22 @@ nav a:hover
 .dot:hover
 {
   background-color: #888;
+}
+.suggestion h
+{
+  text-align: center;
+  padding: 15px;
+}
+.suggestion
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 18%;
+  margin-right: 18%;
+  justify-content: center;
+  padding: 60px 0px;
+  text-align: left;
 }
 .text1
 {
