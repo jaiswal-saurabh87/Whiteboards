@@ -1,0 +1,8 @@
+Features
+Quiz
+Whiteboard
+Homework Helper (AI)
+To Do List
+
+_------------------------------------
+after login the page must be changed in such way that no longer promotion is shown !!
