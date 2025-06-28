@@ -6,12 +6,13 @@
   <link rel="icon" type="image" href="favicon.png">
   <link rel="stylesheet" href="styles.css" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="video-carousel.js"></script>
 </head>
-<body id="home">
+<body>
   <header>
     <div class="logo">
-      <a href="#home"><img src="logo-dark.png" id="logoImg"></a>
-      <a href="#home"><h1 style="color :white; font-family: 'Ginger'; font-size: 38px;"> WHITEBOARDS</h1></a>
+      <a href="#"><img src="logo-dark.png" id="logoImg"></a>
+      <a href="#"><h1 style="color :white; font-family: 'Ginger'; font-size: 38px;"> WHITEBOARDS</h1></a>
     </div>
     <nav>
       <a href="#courses-box">Free Courses</a>
@@ -65,27 +66,67 @@
     <div class="carousel-section-container">
       <div class="video-carousel-wrapper">
         <div class="video-carousel" id="videoCarousel">
+          <!-- Video 1 -->
           <div class="video-card">
             <div class="video-thumbnail">
-              <img src="https://placehold.co/400x225/007bff/ffffff?text=Video+1+Thumbnail" alt="Video 1 Thumbnail">
+              <img src="https://placehold.co/400x225/007bff/ffffff?text=Video+1+Thumbnail">
             </div>
             <div class="video-details">
-              <h3 class="video-title">Introduction to Web Development</h3>
+              <h7 class="video-title">Introduction to Web Development</h7>
               <p class="video-description">Learn the basics of HTML, CSS, and JavaScript to start your web development journey.</p>
-              <a href="#" class="view-button">View Course</a>
+              <a href="#" class="view-button">View &gt;</a>
             </div>
           </div>
+          <!-- Video 2 -->
           <div class="video-card">
             <div class="video-thumbnail">
-              <img src="https://placehold.co/400x225/28a745/ffffff?text=Video+2+Thumbnail" alt="Video 2 Thumbnail">
+              <img src="https://placehold.co/400x225/28a745/ffffff?text=Video+2+Thumbnail">
             </div>
             <div class="video-details">
-              <h3 class="video-title">Advanced CSS Techniques</h3>
+              <h7 class="video-title">Advanced CSS Techniques</h7>
               <p class="video-description">Dive deeper into Flexbox, Grid, and responsive design with practical examples.</p>
-              <a href="#" class="view-button">View Course</a>
+              <a href="#" class="view-button">View &gt;</a>
             </div>
           </div>
-          
+          <!-- Video 3 -->
+          <div class="video-card">
+            <div class="video-thumbnail">
+              <img src="https://placehold.co/400x225/dc3545/ffffff?text=Video+3+Thumbnail" alt="Video 3 Thumbnail">
+            </div>
+            <div class="video-details">
+              <h7 class="video-title">JavaScript ES6 Features</h7>
+              <p class="video-description">Explore modern JavaScript features like arrow functions, destructuring, and async/await.</p>
+              <a href="#" class="view-button">View &gt;</a>
+            </div>
+          </div>
+          <!-- Video 4 -->
+          <div class="video-card">
+            <div class="video-thumbnail">
+              <img src="https://placehold.co/400x225/ffc107/333333?text=Video+4+Thumbnail">
+            </div>
+            <div class="video-details">
+              <h7 class="video-title">Building RESTful APIs with Node.js</h7>
+              <p class="video-description">Master backend development by creating robust APIs using Node.js and Express.</p>
+              <a href="#" class="view-button">View &gt;</a>
+            </div>
+          </div>
+          <!-- Video 5 -->
+          <div class="video-card">
+            <div class="video-thumbnail">
+              <img src="https://placehold.co/400x225/ffc107/333333?text=Video+5+Thumbnail">
+            </div>
+            <div class="video-details">
+              <h7 class="video-title">Introduction to React.js</h7>
+              <p class="video-description">Get started with React.js, the popular JavaScript library for building user interfaces.</p>
+              <a href="#" class="view-button">View &gt;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-dots" id="carouselDots">
+
+      </div>
+    </div>
   </section>
 
  
