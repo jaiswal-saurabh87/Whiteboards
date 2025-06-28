@@ -1,4 +1,5 @@
-.upskill-card-container {
+.container2
+{
     width: 100%; /* Default to full width for mobile */
     max-width: 768px; /* Arbitrary max width for the card on larger screens */
     margin-left: auto; /* mx-auto */
@@ -17,15 +18,15 @@
     padding-bottom: 2rem; /* Add some vertical padding inside the card */
 }
 
-/* Media query for medium screens and up (md: breakpoint in Tailwind, typically 768px) */
-@media (min-width: 768px) {
-    .upskill-card-container {
+@media (min-width: 768px) 
+{
+    .container2
+    {
         flex-direction: row; /* md:flex-row */
     }
 }
-
-/* Thumbnail box styling, translating `w-full md:w-1/3 h-64 bg-blue-700 rounded-xl shadow-lg flex items-center justify-center p-4 upskill-content-box` */
-.upskill-thumbnail-box {
+.thumbnail-box 
+{
     width: 100%; /* w-full for mobile */
     height: 16rem; /* h-64 (Tailwind's h-64 is 16rem or 256px) */
     background-color: #2b6cb0; /* bg-blue-700 */
@@ -37,48 +38,45 @@
     padding: 1rem; /* p-4 */
     box-sizing: border-box; /* Include padding in width/height */
 }
-
-/* Media query for medium screens and up */
-@media (min-width: 768px) {
-    .upskill-thumbnail-box {
+@media (min-width: 768px) 
+{
+    .thumbnail-box
+    {
         width: 33.333333%; /* md:w-1/3 */
         flex-shrink: 0; /* Prevent it from shrinking too much */
     }
 }
-
-/* Thumbnail text styling */
-.upskill-thumbnail-text {
+.thumbnail-text 
+{
     color: #cbd5e0; /* text-gray-300 */
     font-size: 1.125rem; /* text-lg */
     text-align: center;
     margin: 0; /* Remove default paragraph margin */
 }
-
-/* Content text section styling, translating `w-full md:w-2/3 text-center md:text-left` */
-.upskill-content-text {
+.content-text {
     width: 100%; /* w-full for mobile */
     text-align: center; /* text-center for mobile */
 }
 
-/* Media query for medium screens and up */
-@media (min-width: 768px) {
-    .upskill-content-text {
+@media (min-width: 768px) 
+{
+    .content-text
+    {
         width: 66.666667%; /* md:w-2/3 */
         text-align: left; /* md:text-left */
     }
 }
 
-/* Title styling, translating `text-3xl font-bold mb-4` */
-.upskill-title {
+.thumbnail-title
+{
     font-size: 1.875rem; /* text-3xl (30px) */
     font-weight: 700; /* font-bold */
     margin-bottom: 1rem; /* mb-4 (16px) */
     color: #fff; /* text-white */
     line-height: 1.2; /* Adjust line height for multi-line title */
 }
-
-/* View link styling, translating `inline-flex items-center text-blue-400 hover:text-blue-200 transition duration-300 ease-in-out` */
-.upskill-view-link {
+.view-link
+{
     display: inline-flex; /* inline-flex */
     align-items: center; /* items-center */
     color: #63b3ed; /* text-blue-400 */
@@ -86,7 +84,8 @@
     transition: color 0.3s ease-in-out; /* transition duration-300 ease-in-out */
 }
 
-.upskill-view-link:hover {
+.view-link:hover
+{
     color: #a7d9ff; /* hover:text-blue-200 */
 }
 
