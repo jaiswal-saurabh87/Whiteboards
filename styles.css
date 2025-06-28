@@ -179,7 +179,7 @@ nav a:hover
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(10px);
   opacity: 1;
-  visibility: visible;
+  visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 .popup.hidden-popup 
@@ -220,27 +220,27 @@ nav a:hover
 }
 .popup-button 
 {
-  font-weight: 700; /* font-bold */
-  padding-top: 0.75rem; /* py-3 (12px) */
-  padding-bottom: 0.75rem; /* py-3 (12px) */
-  padding-left: 2rem; /* px-8 (32px) */
-  padding-right: 2rem; /* px-8 (32px) */
-  border-radius: 9999px; /* rounded-full */
-  transition: all 0.3s ease-in-out; /* transition duration-300 ease-in-out */
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
-  border: none; /* Remove default button border */
+  font-weight: 700;
+  padding-top: 0.75rem; 
+  padding-bottom: 0.75rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 9999px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: none;
   cursor: pointer;
 }
 .signup
 {
-    background-color: #2563eb; /* bg-blue-600 */
-    color: #fff; /* text-white */
-    transform: scale(1); /* transform */
+    background-color: #2563eb;
+    color: #fff;
+    transform: scale(1);
 }
 .signup:hover 
 {
-    background-color: #1d4ed8; /* hover:bg-blue-700 */
-    transform: scale(1.05); /* hover:scale-105 */
+    background-color: #1d4ed8;
+    transform: scale(1.05);
 }
 .close
 {
@@ -256,9 +256,10 @@ nav a:hover
 }
 .close:hover
 {
-    color: #e2e8f0; /* hover:text-gray-200 */
-    text-decoration: underline; /* Optional: Add underline on hover */
+    color: white;
+    text-decoration: underline;
 }
+
 .features h3, .suggestions h3 
 {
   text-align: center;
